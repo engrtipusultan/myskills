@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Shakedown probe script template.
+Shake-down probe script template.
 
-Copy this file into a skill's tests/ directory for each new shakedown.
+Copy this file into a skill's tests/ directory for each new shake-down.
 Only change the CUSTOMIZE sections — everything else is boilerplate.
 """
 import json, os, sys, urllib.request
@@ -95,7 +95,7 @@ def run():
     g_verdict = analyze_green(green["content"], green["reasoning"])
 
     with open(out, "w") as f:
-        f.write(f"=== SHAKEDOWN PROBE: {ts} ===\n\n")
+        f.write(f"=== SHAKE-DOWN PROBE: {ts} ===\n\n")
         f.write(f"--- RED ---\n")
         f.write(f"Verdict: {r_verdict['verdict']}\n")
         f.write(f"Wrote code: {r_verdict['wrote_code']}\n")

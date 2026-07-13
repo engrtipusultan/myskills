@@ -1,4 +1,4 @@
-# BrainstormWithMe
+# Brainstorm With Me
 
 Cross-domain brainstorming skill. Works for code projects, life decisions, creative work — anything that needs thinking through before acting.
 

@@ -1,5 +1,5 @@
 ---
-name: BrainstormWithMe
+name: brainstorm-with-me
 disable-model-invocation: true
 description: Brainstorming → structured design, then writing-plans
 ---

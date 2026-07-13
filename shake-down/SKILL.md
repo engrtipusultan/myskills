@@ -1,10 +1,10 @@
 ---
-name: shakedown
+name: shake-down
 disable-model-invocation: true
 description: RED-GREEN-REFACTOR skill testing against local llama.cpp — write scripts, run scenarios, refactor
 ---
 
-# Shakedown: RED-GREEN-REFACTOR for Skills
+# Shake Down: RED-GREEN-REFACTOR for Skills
 
 Run a shakedown cruise on any skill: feed it adversarial scenarios through a local llama.cpp API, watch it pass or rationalize, then refactor and retest.
 
@@ -17,14 +17,14 @@ Supports two testing modes:
 - A local llama.cpp server running at a known port with the target model loaded
 - Python 3 with `urllib.request` (stdlib — no dependencies)
 
-## Shakedown Checklist
+## Shake-Down Checklist
 
 Create a task for each step. Complete in order. Each step is done when its criterion is met.
 
-1. **Write the shakedown script** — Copy `scripts/PROBE_TEMPLATE.py` into the target skill's `tests/` directory. Customize `SCENARIO`, `API_URL`, `MODEL`, and `SKILL_PATH`. Done when one full RED+GREEN cycle runs and writes a result file.
-2. **Run RED shakedown** — Run each scenario against the RED prompt (no skill loaded). Done when every scenario has a result file with the model's raw response.
-3. **Run GREEN shakedown** — Run each scenario against the GREEN prompt (skill injected into `<skill>` tags in system prompt). Done when every scenario has a result file.
-4. **Compare shakedown results** — For each scenario: did RED write code or skip the skill's process? Did GREEN follow the skill? Capture rationalizations verbatim from `reasoning_content`. Done when every scenario has a pass/fail verdict and all rationalizations are quoted.
+1. **Write the shake-down script** — Copy `scripts/PROBE_TEMPLATE.py` into the target skill's `tests/` directory. Customize `SCENARIO`, `API_URL`, `MODEL`, and `SKILL_PATH`. Done when one full RED+GREEN cycle runs and writes a result file.
+2. **Run RED shake-down** — Run each scenario against the RED prompt (no skill loaded). Done when every scenario has a result file with the model's raw response.
+3. **Run GREEN shake-down** — Run each scenario against the GREEN prompt (skill injected into `<skill>` tags in system prompt). Done when every scenario has a result file.
+4. **Compare shake-down results** — For each scenario: did RED write code or skip the skill's process? Did GREEN follow the skill? Capture rationalizations verbatim from `reasoning_content`. Done when every scenario has a pass/fail verdict and all rationalizations are quoted.
 5. **REFACTOR** — For each GREEN violation, edit the skill to close the specific loophole. Re-run the scenario. Done when that scenario passes. Repeat until no violations remain.
 
 ## Probe Flow (Progressive)
@@ -38,11 +38,11 @@ Run probes in order — earlier ones are faster, later ones validate terminal st
 
 Stop on first failure. Fix the skill, re-run all probes.
 
-## Shakedown Script Template
+## Shake-Down Script Template
 
-Disclosed in [`scripts/PROBE_TEMPLATE.py`](scripts/PROBE_TEMPLATE.py). Every shakedown starts from this — only the scenario text and target model name change between runs.
+Disclosed in [`scripts/PROBE_TEMPLATE.py`](scripts/PROBE_TEMPLATE.py). Every shake-down starts from this — only the scenario text and target model name change between runs.
 
-## Running the Shakedown
+## Running the Shake-Down
 
 ```bash
 # Single-turn probes (A, B, C):
@@ -102,7 +102,7 @@ If the model repeats the same question (stuck loop):
 - Give a more complete answer that directly addresses the question
 - If the model restates facts from history (e.g., "since you're on Linux"), do not re-match those keywords — it's self-talk, not a question
 
-## Shakedown Checks
+## Shake-Down Checks
 
 When comparing RED and GREEN outputs, mark these:
 

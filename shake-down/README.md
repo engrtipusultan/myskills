@@ -1,4 +1,4 @@
-# Shakedown
+# Shake Down
 
 RED-GREEN-REFACTOR testing methodology for agent skills. Tests any skill against adversarial scenarios on local models to find loopholes and rationalizations.
 
