@@ -1,0 +1,5 @@
+interface:
+  display_name: "writing-helper"
+  short_description: "Write or rewrite any text — docs, emails, articles, stories, reports — with grammar correction and human-sounding style"
+policy:
+  allow_implicit_invocation: false

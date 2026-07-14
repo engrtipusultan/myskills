@@ -1,0 +1,5 @@
+interface:
+  display_name: "shake-down"
+  short_description: "RED-GREEN-REFACTOR skill testing against local llama.cpp — write scripts, run scenarios, refactor"
+policy:
+  allow_implicit_invocation: false

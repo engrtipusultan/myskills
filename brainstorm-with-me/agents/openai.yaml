@@ -1,0 +1,5 @@
+interface:
+  display_name: "brainstorm-with-me"
+  short_description: "Brainstorming → structured design, then writing-plans"
+policy:
+  allow_implicit_invocation: false
