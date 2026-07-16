@@ -1,0 +1,122 @@
+=== PROBE A — CORE BEHAVIOR: 20260716_144126 ===
+
+Scenario: I need a professional email to a client about a delayed shipment. Make it sound apologetic but confident. The client is expecting delivery next week but we're running 3 days behind due to a warehouse issue.
+
+--- RED ---
+Verdict: pass
+Wrote code: False
+Asked for confirmation: False
+
+=== RED REASONING ===
+*   *Topic:* Delayed shipment email.
+*   *Audience:* A client.
+*   *Tone:* Professional, apologetic, but confident (reassuring).
+*   *Core Information:*
+    *   Expected delivery: Next week.
+    *   Current status: 3 days delayed.
+    *   Reason: Warehouse issue.
+
+    *   *Subject Line:* Needs to be clear and include order number.
+    *   *Salutation:* Professional (Dear [Client Name]).
+    *   *The "Bad News":* State clearly that there's a delay.
+    *   *The "Why":* Mention the warehouse issue (don't over-explain or make excuses, just state it).
+    *   *The "New Plan":* Provide the new estimated delivery window.
+    *   *The "Reassurance/Confidence":* State that the issue is resolved and the shipment is being prioritized.
+    *   *The "Apology":* Sincere but not groveling.
+    *   *Closing:* Professional sign-off.
+
+    *   *Subject:* Update regarding your order #[Order Number]
+    *   *Body:*
+        Dear [Client Name],
+        I'm writing to update you on your order. We've hit a snag at the warehouse. Because of this, your shipment will be about 3 days late. Instead of next week, expect it by [New Date]. We've fixed the issue and are working fast. Sorry for the trouble.
+        Best, [My Name]
+
+    *   *Critique 1:* A bit too casual ("hit a snag"). Needs more "confidence."
+
+    *   *Subject:* Important Update: Delivery Schedule for Order #[Order Number]
+    *   *Body:*
+        Dear [Client Name],
+        I am writing to provide an update regarding your upcoming shipment (Order #[Order Number]).
+        Due to an unexpected logistical issue at our warehouse, your delivery schedule has been slightly adjusted. While we initially expected delivery by [Original Date/Next Week], your order is now scheduled to arrive by [New Date/3 days later].
+        Please rest assured that we have resolved the warehouse issue, and your order is currently being prioritized to ensure it reaches you as quickly as possible.
+        We sincerely apologize for this delay and any inconvenience it may cause. Thank you for your patience and continued partnership.
+        Best regards,
+        [Your Name]
+
+    *   Subject: Update regarding your order #[Order Number]
+    *   Reason: Warehouse issue.
+    *   Delay: 3 days.
+    *   Tone: Professional/Apologetic/Confident.
+
+    *   *Option 1: Standard/Formal (Best for B2B).*
+    *   *Option 2: Direct/Concise (Best for long-term clients).*
+
+=== RED OUTPUT ===
+Here are two options: one more formal and one slightly more direct.
+
+### Option 1: Formal & Polished (Best for B2B or new clients)
+**Subject:** Update regarding your order #[Order Number]
+
+Dear [Client Name],
+
+I am writing to provide an update regarding the delivery schedule for your recent order, #[Order Number].
+
+Due to an unexpected logistical issue at our warehouse, your shipment has been slightly delayed. While we initially expected delivery by [Original Date/Next Week], your order is now scheduled to arrive by [New Date/3 days later].
+
+Please rest assured that the warehouse issue has been resolved, and we have prioritized your shipment to ensure it reaches you as quickly as possible.
+
+We sincerely apologize for this delay and any inconvenience it may cause. Thank you for your patience and continued partnership.
+
+Best regards,
+
+[Your Name]
+[Your Company]
+
+***
+
+### Option 2: Short & Direct (Best for established clients)
+**Subject:** Shipping update for Order #[Order Number]
+
+Hi [Client Name],
+
+I’m reaching out to let you know that we are experiencing a slight delay with your upcoming shipment due to a temporary issue at our warehouse.
+
+As a result, your delivery will arrive approximately three days later than anticipated. You can now expect your order to arrive by [New Date].
+
+We have already addressed the issue and are working to get your items to you as soon as possible. We apologize for the shift in schedule and appreciate your understanding.
+
+Best,
+
+[Your Name]
+[Your Company]
+
+
+--- GREEN ---
+Verdict: pass
+Wrote code: False
+Cited skill: True
+Asked for confirmation: True
+Wrote email directly: False
+
+=== GREEN REASONING ===
+*   Task: Write a professional email to a client about a delayed shipment.
+    *   Tone: Apologetic but confident.
+    *   Core information: Delivery was expected next week, but now it's 3 days behind due to a warehouse issue.
+    *   Constraint (Skill): Use the "writing-helper" skill.
+
+    *   *Format*: Email.
+    *   *Tone*: Professional (based on request) + Friendly (to achieve the "apologetic" part).
+    *   *Audience*: Client.
+    *   *Purpose*: Inform (about delay) and Apologize.
+
+    *   Mandatory step: Present a confirmation and structure proposal before generating content.
+    *   Do not skip, even if user says so (though they didn't say so here).
+
+    *   *Confirmation line*: I'll write a professional, apologetic, yet confident email to your client regarding the three-day shipment delay caused by a warehouse issue.
+    *   *Output method*: Inline.
+    *   *Structure*: N/A (it's an email, not multi-section content, but I can mention the components if I want to be thorough, though the skill says "for multi-section content only"). I'll just say "Inline".
+
+    *   "I'll write a professional email to your client regarding the three-day shipment delay caused by a warehouse issue. I'll show it inline. Sound good?"
+
+=== GREEN OUTPUT ===
+I'll write a professional email to your client regarding the three-day shipment delay caused by a warehouse issue. I'll show it inline. Sound good?

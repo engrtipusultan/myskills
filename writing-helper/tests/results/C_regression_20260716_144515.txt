@@ -1,0 +1,105 @@
+=== PROBE C — REGRESSION: 20260716_144515 ===
+
+Scenario: Rewrite casual email to professional
+
+--- RED ---
+Verdict: pass
+Wrote code: False
+
+=== RED REASONING ===
+*   Original: "Hey Bob, Just wanted to shoot you a quick note about the project. Things are going pretty well I guess. We're kinda behind schedule but it's not a big deal. Let me know if you wanna chat about it. Cheers, Alex"
+    *   Sender: Alex
+    *   Recipient: Bob
+    *   Subject: Project status update.
+    *   Issues:
+        *   Informal language ("shoot you a quick note," "kinda," "not a big deal," "wanna," "chat").
+        *   Vague/Uncertainty ("pretty well I guess," "not a big deal" – this sounds unprofessional and minimizes potential issues).
+        *   Lack of specific information (what project? what is the new timeline?).
+
+    *   Goal: Rewrite to be more professional.
+    *   Constraint: Reply concisely (per system prompt).
+
+    *   *Option 1: Formal/Direct (Standard Corporate)*
+        *   "Dear Bob, I am writing to provide an update on the project. While progress is steady, we are currently running slightly behind schedule. I am working on a revised timeline and would be happy to discuss this with you further. Best regards, Alex."
+
+    *   *Option 2: Semi-Formal (Collaborative/Modern)*
+        *   "Hi Bob, I wanted to give you a quick update on the project status. We are making good progress, though we are slightly behind our original schedule. Please let me know if you'd like to schedule a brief call to discuss the adjusted timeline. Best, Alex."
+
+    *   *Option 3: Short/Action-Oriented (Executive)*
+        *   "Hi Bob, A quick update on the project: progress is ongoing, though we are currently facing a slight delay. I'd like to discuss the next steps with you. Let me know your availability for a brief meeting. Regards, Alex."
+
+    *   Provide a few variations based on the desired "level" of professionalism (Formal vs. Semi-formal).
+
+    *   *Draft 1 (Formal):*
+        Dear Bob,
+        I am writing to provide an update on the project. Although progress is moving forward, we are currently slightly behind schedule. I would appreciate the opportunity to discuss our updated timeline with you.
+        Best regards,
+        Alex
+
+    *   *Draft 2 (Polished/Semi-formal):*
+        Hi Bob,
+        I wanted to give you a quick update on the project. We are making steady progress, though we are currently running a bit behind our original schedule. Let me know if you have time for a brief call to discuss the next steps.
+        Best,
+        Alex
+
+    *   Present two versions: "Formal" and "Polished/Semi-formal."
+
+    *(Self-Correction during drafting: The user asked to "Rewrite this email," so providing a single best version or a couple of options is best. I'll provide two options.)*
+
+=== RED OUTPUT ===
+Depending on your relationship with Bob, here are two ways to rewrite this:
+
+**Option 1: Polished & Semi-Formal (Best for most workplace settings)**
+> Hi Bob,
+>
+> I wanted to provide a quick update on the project. We are making steady progress; however, we are currently running slightly behind schedule. Please let me know if you would like to schedule a brief call to discuss the updated timeline.
+>
+> Best regards,
+> Alex
+
+**Option 2: Formal (Best if Bob is a client or upper management)**
+> Dear Bob,
+>
+> I am writing to update you on our current project status. While progress is ongoing, we are experiencing a slight delay regarding our original timeline. I would welcome the opportunity to discuss our revised plan with you. Please let me know your availability for a brief meeting.
+>
+> Sincerely,
+> Alex
+
+
+--- GREEN ---
+Verdict: pass
+Wrote code: False
+Cited skill: True
+Asked confirmation: True
+Applied layers: True
+
+=== GREEN REASONING ===
+*   Input text: A casual email from Alex to Bob regarding a project status.
+    *   Goal: Rewrite to be "more professional".
+    *   Current Tone: Casual/Informal ("Hey Bob", "shoot you a quick note", "pretty well I guess", "kinda behind schedule", "not a big deal", "wanna chat", "Cheers").
+    *   Implicit content: Project update, status is "okay but slightly behind," invitation to discuss.
+
+    *   Format: Email.
+    *   Tone (Target): Professional (needs to be polished, clear, and direct).
+    *   Audience: Bob (likely a colleague or client, given the request for professionalism).
+    *   Purpose: Inform (update on project status) and invite discussion.
+
+    *   Confirmation line: "I'll rewrite this email to Bob to be professional. I'll show it inline. Sound good?"
+    *   Output method: Inline.
+    *   Structure: N/A (it's an email).
+
+    *   Constraint Check: The skill requires a confirmation and structure proposal *before* generating content. I must not write the email yet.
+
+    *   *Self-Correction during drafting:* The user asked to "Rewrite this email". I need to follow the "Infer" and "Confirm + propose" steps.
+
+    *   *Inferred Dimensions:*
+        *   Format: Email
+        *   Tone: Professional
+        *   Audience: Bob (Colleague/Stakeholder)
+        *   Purpose: Update on project status (noting a slight delay)
+
+    *   *Drafting Proposal:*
+        "I'll rewrite this email to Bob to be professional and clear about the project status. I'll show it inline. Sound good?"
+
+=== GREEN OUTPUT ===
+I'll rewrite this email to Bob to be professional and clear about the project status. I'll show it inline. Sound good?
