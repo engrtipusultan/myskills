@@ -165,7 +165,7 @@ Fix structural issues that hurt readability. Unlike the surgical pass, this may 
 ### Technical
 **Voice:** Jargon-rich, precise, specification-grade.
 **When:** API docs, architecture guides, technical specifications, code comments, engineering wikis.
-**Guidelines:** Define terms on first use. One idea per sentence. Imperative mood for instructions. Tables and lists for genuinely list-shaped content. Prefer "is"/"has" over inflated substitutes.
+**Guidelines:** Define terms on first use. One idea per sentence. Imperative mood for instructions. Tables and lists for genuinely list-shaped content. Prefer "is"/"has" over inflated substitutes. Apply ASD-STE100 Simplified Technical English.
 **Vocabulary indicators:** "implements," "extends," "configures," "returns," "requires," "specifies."
 **Before:** "The system works pretty well and handles most of the cases users throw at it."
 **After:** "The system handles standard input cases and returns errors for malformed requests. Configure the timeout parameter in the settings file."
@@ -260,6 +260,7 @@ Aggressively removing every irregularity pushes text toward AI patterns. Keep na
 ## Rules
 
 - **Surgical correction and humanize are mandatory** — grammar, logic, and flow correction plus humanize applied to every output, always. Not optional. Cannot be skipped or overridden.
+- **ISO 24495-1:2023 Plain Language is the baseline** for all content. Use ASD-STE100 Simplified Technical English when the tone is Technical.
 - **Confirm step is mandatory** — always present a proposal before generating. Do not skip even if the user tells you to bypass it.
 - **Deliver only the finished text** — output stands on its own
 - **Deduce from the request without asking** — infer, then confirm
